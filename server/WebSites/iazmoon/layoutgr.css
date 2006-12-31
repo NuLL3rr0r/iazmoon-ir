@@ -1,0 +1,41 @@
+@charset "UTF-8"!important;
+body {
+	direction: rtl;
+	background: url(bg.gif);
+	font-family: Tahoma;
+}
+#divMain {
+	position: relative;
+	text-align: right;
+	border: solid 1px #000000;
+	width: 99%;
+}
+.frmStyle {
+	position: absolute;
+	left: 0px;
+	width: 133px;
+	font-family: Tahoma;
+	font-size: 11px;
+}
+#divErrVerify {
+	width: 100%;
+	visibility: hidden;
+	color: #FF0000;
+}
+a:link {
+	text-decoration: none;
+	color: #0000FF;
+}
+a:visited {
+	text-decoration: none;
+	color: #0000FF;
+}
+a:hover {
+	text-decoration: none;
+	color: #0000FF;
+	font-weight: bolder;
+}
+a:active {
+	text-decoration: none;
+	color: #0000FF;
+}

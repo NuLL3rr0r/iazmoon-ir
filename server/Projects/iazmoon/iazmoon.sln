@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\iazmoon\", "..\..\WebSites\iazmoon\", "{48ABCECD-E1DD-4008-9057-132CD71A66E5}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/iazmoon"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\iazmoon\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\iazmoon\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/iazmoon"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\iazmoon\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\iazmoon\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1442"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48ABCECD-E1DD-4008-9057-132CD71A66E5}.Debug|.NET.ActiveCfg = Debug|.NET
+		{48ABCECD-E1DD-4008-9057-132CD71A66E5}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

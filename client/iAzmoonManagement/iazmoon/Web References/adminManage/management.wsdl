@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getAdminPw">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAdminPwResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAdminPwResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setAdminPw">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pw" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="npw" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setAdminPwResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="setAdminPwResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setStudentsResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsSR">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setStudentsResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="setStudentsResultResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getStudentsResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getStudentsResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getStudentsResultResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eraseStudentsResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="from" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="to" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eraseStudentsResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eraseStudentsResultResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getAdminPwSoapIn">
+    <wsdl:part name="parameters" element="tns:getAdminPw" />
+  </wsdl:message>
+  <wsdl:message name="getAdminPwSoapOut">
+    <wsdl:part name="parameters" element="tns:getAdminPwResponse" />
+  </wsdl:message>
+  <wsdl:message name="setAdminPwSoapIn">
+    <wsdl:part name="parameters" element="tns:setAdminPw" />
+  </wsdl:message>
+  <wsdl:message name="setAdminPwSoapOut">
+    <wsdl:part name="parameters" element="tns:setAdminPwResponse" />
+  </wsdl:message>
+  <wsdl:message name="setStudentsResultSoapIn">
+    <wsdl:part name="parameters" element="tns:setStudentsResult" />
+  </wsdl:message>
+  <wsdl:message name="setStudentsResultSoapOut">
+    <wsdl:part name="parameters" element="tns:setStudentsResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStudentsResultSoapIn">
+    <wsdl:part name="parameters" element="tns:getStudentsResult" />
+  </wsdl:message>
+  <wsdl:message name="getStudentsResultSoapOut">
+    <wsdl:part name="parameters" element="tns:getStudentsResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="eraseStudentsResultSoapIn">
+    <wsdl:part name="parameters" element="tns:eraseStudentsResult" />
+  </wsdl:message>
+  <wsdl:message name="eraseStudentsResultSoapOut">
+    <wsdl:part name="parameters" element="tns:eraseStudentsResultResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ManagementSoap">
+    <wsdl:operation name="getAdminPw">
+      <wsdl:input message="tns:getAdminPwSoapIn" />
+      <wsdl:output message="tns:getAdminPwSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setAdminPw">
+      <wsdl:input message="tns:setAdminPwSoapIn" />
+      <wsdl:output message="tns:setAdminPwSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setStudentsResult">
+      <wsdl:input message="tns:setStudentsResultSoapIn" />
+      <wsdl:output message="tns:setStudentsResultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getStudentsResult">
+      <wsdl:input message="tns:getStudentsResultSoapIn" />
+      <wsdl:output message="tns:getStudentsResultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eraseStudentsResult">
+      <wsdl:input message="tns:eraseStudentsResultSoapIn" />
+      <wsdl:output message="tns:eraseStudentsResultSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ManagementSoap" type="tns:ManagementSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getAdminPw">
+      <soap:operation soapAction="http://tempuri.org/getAdminPw" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setAdminPw">
+      <soap:operation soapAction="http://tempuri.org/setAdminPw" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setStudentsResult">
+      <soap:operation soapAction="http://tempuri.org/setStudentsResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStudentsResult">
+      <soap:operation soapAction="http://tempuri.org/getStudentsResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eraseStudentsResult">
+      <soap:operation soapAction="http://tempuri.org/eraseStudentsResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ManagementSoap12" type="tns:ManagementSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getAdminPw">
+      <soap12:operation soapAction="http://tempuri.org/getAdminPw" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setAdminPw">
+      <soap12:operation soapAction="http://tempuri.org/setAdminPw" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setStudentsResult">
+      <soap12:operation soapAction="http://tempuri.org/setStudentsResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStudentsResult">
+      <soap12:operation soapAction="http://tempuri.org/getStudentsResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eraseStudentsResult">
+      <soap12:operation soapAction="http://tempuri.org/eraseStudentsResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Management">
+    <wsdl:port name="ManagementSoap" binding="tns:ManagementSoap">
+      <soap:address location="http://localhost:1442/iazmoon/management.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ManagementSoap12" binding="tns:ManagementSoap12">
+      <soap12:address location="http://localhost:1442/iazmoon/management.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
